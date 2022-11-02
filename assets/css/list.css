@@ -36,6 +36,7 @@
     align-items: center;
     padding: 0px 2px;
 }
+.swipper-btn:hover,
 .swipper-wrapper img:hover{
     cursor: pointer;
     /* scale: 1.1; */
@@ -60,7 +61,18 @@
     top: 0;
     
 }
+.swipper-btn:hover
 .swipper-btn.prev i{
     line-height: 74px;
     margin-left: 5px;
+}
+.mg20{
+    margin:  10px;
+}
+.noshadow{
+    box-shadow: none;
+}
+.box1{
+    justify-content: left;
+    height: auto;
 }
