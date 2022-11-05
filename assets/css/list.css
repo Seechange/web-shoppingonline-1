@@ -75,3 +75,10 @@
     justify-content: left;
     height: auto;
 }
+/* CSS manage.html */
+.sub-menu .block-name{
+    padding: 12px 20px;
+}
+.block-name i{
+    margin-right: 8px;
+}
