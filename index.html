@@ -1156,10 +1156,10 @@
             </div>
             <div class="modal-body">
                 <lable class="mgtbt15 tickets"><i class="ti-user"></i> Tên đăng nhập</lable>
-                <input class="input username" type="text" placeholder=" Email or user name...">
+                <input class="input username" id="un" type="text" onkeyup="daoNutDN()" placeholder=" Email or user name..." autocomplete="off" autofocus/>
                 <lable class="mgtbt15 tickets"><i class="ti-shield"></i> Mật khẩu</lable>
-                <input class="input password" type="password" placeholder=" Enter password...">
-                <button class="Login">Đăng Nhập <i class="ti-check"></i></button>
+                <input class="input password" id="pw" type="password" onkeyup="daoNutDN()" placeholder=" Enter password..." autocomplete="off" autofocus/>
+                <button type="submit" class="Login" id="btnLogin">Đăng Nhập <i class="ti-check"></i></button>
             </div>
             <div class="footer-container">
                 <span>Khách hàng mới ?<a class="sign-in " href="signin.html">Tạo tài khoản</a></span>
@@ -1171,7 +1171,16 @@
     
 
 </body>
-<script src="./js/app.js">
-    
+<script src="./js/app.js"></script>
+<script >
+    document.getElementById("btnLogin").disabled=true;
+    function daoNutDN(){
+    var u = document.getElementById("un").value;
+    var p = document.getElementById("mk").value;
+    if (u.length>0 && p.length>0) 
+        document.getElementById("btnLogin").disabled=false;
+    else
+        document.getElementById("btnLogin").disabled=true;
+}
 </script>
 </html>
