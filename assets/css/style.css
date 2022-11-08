@@ -20,7 +20,7 @@ body{
     z-index: 1;
 }
 .container{
-    height: 560px;
+    height: 400px;
     background-color: #FACC2E;
 }
 .header-banner img{
@@ -77,14 +77,39 @@ body{
 .menu li a{
     text-decoration: none;
     color: black;
-    padding-left: 3px;
+
 }
-.main-menu .menu li:hover .row.list-item{
+/* .main-menu .menu li:hover .row.list-item{
     background-color: red;
     display: block;
-}
-.row.list-item{ 
+} */
+/* test hover */
+.grid.wide.sub-navi{
     display: none;
+    margin-top: 12px;
+    font-size: 18px;
+    flex-wrap: nowrap;
+    padding-top: 12px;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+    list-style: none;
+    background-color: white;
+    position: absolute;
+
+}
+.down-icon{
+    font-size: 14px;
+    /* display: none; */
+}
+/* .fixed-header:hover .sub-navi{
+    display: flex;
+} */
+.sub-navi li span{
+    color: red;
+    /* text-transform: uppercase; */
+}
+.menu li:hover .sub-navi{
+    display: flex;
 }
 .list-item{
     margin-top: 10px;
@@ -109,7 +134,7 @@ body{
 .list-iphone li a{
     text-decoration: none;
     color: black;
-    font-size: 12px;
+    font-size: 16px;
 }
 .picture-sale img{
     margin-top: 160px;
@@ -272,6 +297,41 @@ body{
     font-size: 14px;
     margin:auto ;
     padding: 1px 2px 2px;
+}
+.loadpicture{
+    position: relative;
+}
+.detail-product .loadpicture .box-show-like{
+    position: absolute;
+    top: 50px;
+    right: 0px;
+    left: 0px;
+    bottom: 0px;
+    background-color: white;
+    opacity: 0.6;
+    display: none;
+}
+.loadpicture:hover img{
+    cursor: pointer;
+    scale: 1.06;
+}
+.detail-product .loadpicture:hover .box-show-like{
+    display: block;
+}
+.container-icon{
+    line-height: 252px;
+}
+.box-show-like i:hover{
+    font-size: 38px;
+    color: #D0021C;
+}
+.box-show-like i{
+    font-size: 26px;
+    /* background-color: red; */
+    font-weight: 1000;
+    color: black;
+    margin: 0px 3px;
+    
 }
 .detail-product .loadpicture img{
     width: 210px;
