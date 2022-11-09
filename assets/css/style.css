@@ -599,3 +599,7 @@ body{
 .input-txt .input{
     width: 420px;
 }
+/* laptop fix */
+.detail-product .loadpicture.laptop img{
+    height: 160px;
+}

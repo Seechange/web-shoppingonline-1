@@ -99,29 +99,29 @@
                 <div class="modal-body input-txt">
                     <div class="form-input">
                         <lable class="mgtbt15 tickets"><i class="ti-user"></i> Tên đăng nhập</lable>
-                        <input class="input username" type="text" placeholder=" Enter user name...">
+                        <input id="username" class="input username" type="text" placeholder=" Enter user name...">
                     </div>
                     <div class="form-input">
                         <lable class="mgtbt15 tickets"><i class="ti-shield"></i> Mật khẩu</lable>
-                        <input class="input password" type="password" placeholder=" Enter password...">
+                        <input id="password" class="input password" type="password" placeholder=" Enter password...">
                     </div>
                     <div class="form-input">
                         <lable class="mgtbt15 tickets"><i class="ti-email"></i> Email</lable>
-                        <input class="input email" type="email" placeholder=" Email or user name...">
+                        <input id="email" class="input email" type="email" placeholder=" Email or user name...">
                     </div>
                     <div class="form-input">
                         <lable class="mgtbt15 tickets"><i class="ti-mobile"></i> Số điện thoại </lable>
-                        <input class="input phone" type="text" placeholder=" Enter your phone...">
+                        <input id="phonenumber" class="input phone" type="text" placeholder=" Enter your phone...">
                     </div>
                     <div class="form-input">
                         <lable class="mgtbt15 tickets"><i class="ti-calendar"></i> Ngày sinh</lable>
-                        <input class="input username" type="date" placeholder="">
+                        <input id="dayofbirth" class="input dayofbirth" type="date" placeholder="">
                     </div>
                     <div class="form-input">
                         <lable class="mgtbt15 tickets"><i class="ti-map-alt"></i> Địa chỉ</lable>
-                        <input class="input password" type="text" placeholder=" Enter address...">
+                        <input id="address" class="input address" type="text" placeholder=" Enter address...">
                     </div>
-                    <button style="border-radius:20px ;" class="Login">Tạo tài khoản <i class="ti-check"></i></button>
+                    <button onclick="signup()" type="submit" style="border-radius:20px ;" class="Login">Tạo tài khoản <i class="ti-check"></i></button>
                 </div>
                 <div class="footer-container">
                     <span>Bạn đã có tài khoản ?<a class="sign-in js-login-again" href="">Đăng nhập</a></span>
@@ -202,6 +202,7 @@
             </div>
         </div>
     </div>
+    <script src="./js/signup.js"></script>
 </body>
 <script>
     let btnLogin1 = document.querySelector('.js-login-again')
