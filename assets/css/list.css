@@ -82,3 +82,31 @@
 .block-name i{
     margin-right: 8px;
 }
+/* btn more */
+.btn-more{
+    width: 300px;
+    height: 48px;
+    background-color: white;
+    padding: 10px 20px;
+    margin: auto;
+    margin-bottom: 20px;
+    text-align: center;   align-items: center;
+    justify-content: center;  
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+.btn-more a{
+    text-decoration: none;
+    color: black;
+    line-height: 28px;
+    font-weight: 500;
+}
+.btn-more i{
+    font-size: 12px;
+}
+
+/* slider picture */
+.slider-phone img{
+    height: 300px;
+    border-radius: 30px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
