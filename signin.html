@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="./assets/css/grid.css">
     <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="stylesheet" href="./assets/front-icon/themify-icons/themify-icons.css">
+    <link href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" rel="stylesheet">
+
 </head>
 <body>
     <div id="main">
@@ -101,9 +103,10 @@
                         <lable class="mgtbt15 tickets"><i class="ti-user"></i> Tên đăng nhập</lable>
                         <input id="username" class="input username" type="text" placeholder=" Enter user name...">
                     </div>
-                    <div class="form-input">
+                    <div style="position:relative ;" class="form-input">
                         <lable class="mgtbt15 tickets"><i class="ti-shield"></i> Mật khẩu</lable>
-                        <input id="password" class="input password" type="password" placeholder=" Enter password...">
+                        <input id="password" class="input password" type="password" placeholder=" Enter password..."> <i style="right: 11px;
+                        top: 62px;" class="fas fa-eye" onclick="daoTT()"></i>
                     </div>
                     <div class="form-input">
                         <lable class="mgtbt15 tickets"><i class="ti-email"></i> Email</lable>
@@ -211,5 +214,10 @@
         openModal.classList.add('open')
     }
     btnLogin1.addEventListener('click',showModalLogin)
+    function daoTT() {
+        var mk = document.getElementById("password");
+        mk.type = (mk.type === "password")? "text":"password";
+    }  
 </script>
+
 </html>

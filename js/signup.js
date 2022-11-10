@@ -1,5 +1,4 @@
-function signup(e){
-    event.preventDefault();
+function signup(){
     var username = document.getElementById("username").value
     var email = document.getElementById("email").value
     var password = document.getElementById("password").value
@@ -18,16 +17,15 @@ function signup(e){
     localStorage.setItem(username,json)
     alert("Đăng ký thành công")
 }
-function login(e){
-    event.preventDefault()
+function login(){
     var username = document.getElementById("un").value
     var password = document.getElementById("pw").value
     var user = localStorage.getItem(username)
-    var data = JSON.parse(user)
-    if(username==null){
+    // var data = JSON.parse(user)
+    if(user==null){
         alert("Vui lòng không để trống bất kì ô nào")
     }
-    else if(username == data.username && password == data.password){
+    else if(username ==user.username && password == user.password){
         alert("Đăng nhập thành công")
         window.location.href="index.html"
     }

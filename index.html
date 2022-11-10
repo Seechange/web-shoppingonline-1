@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="stylesheet" href="./assets/css/grid.css">
     <link rel="stylesheet" href="./assets/front-icon/themify-icons/themify-icons.css">
+    <link href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" rel="stylesheet">
 </head>
 <body>
     <div id="main">
@@ -252,8 +253,24 @@
                     <div class="slide fade">
                         <img src="./assets/img/slider_3.webp" alt="">
                     </div>
+                    <div class="slide fade">
+                        <img src="./assets/img/slidemain1.png" alt="">
+                    </div>
+                    <div class="slide fade">
+                        <img src="./assets/img/slidemain2.png" alt="">
+                    </div>
+                    <div class="slide fade">
+                        <img src="./assets/img/slidemain3.png" alt="">
+                    </div>
+                    <div class="slide fade">
+                        <img src="./assets/img/slidemain4.png" alt="">
+                    </div>
                     <br>
                     <div style="text-align:center">
+                        <span class="dot"></span> 
+                        <span class="dot"></span> 
+                        <span class="dot"></span> 
+                        <span class="dot"></span> 
                         <span class="dot"></span> 
                         <span class="dot"></span> 
                         <span class="dot"></span> 
@@ -1736,8 +1753,10 @@
                 <lable class="mgtbt15 tickets"><i class="ti-user"></i> Tên đăng nhập</lable>
                 <input class="input username" id="un" type="text" placeholder=" Email or user name..." autocomplete="off" autofocus/>
                 <lable class="mgtbt15 tickets"><i class="ti-shield"></i> Mật khẩu</lable>
-                <input class="input password" id="pw" type="password" placeholder=" Enter password..." autocomplete="off" autofocus/>
-                <button type="submit" class="Login" id="btnLogin">Đăng Nhập <i class="ti-check"></i></button>
+                <div style="position:relative ;" class="form-txtpw">
+                    <input class="input password" id="pw" type="password" placeholder=" Enter password..."  autocomplete="off" autofocus/> <i  class="fas fa-eye" onclick="daoTT()"></i>
+                    <button type="submit" class="Login" id="btnLogin">Đăng Nhập <i class="ti-check"></i></button>
+                </div>
             </div>
             <div class="footer-container">
                 <span>Khách hàng mới ?<a class="sign-in " href="signin.html">Tạo tài khoản</a></span>
@@ -1751,4 +1770,10 @@
 
 </body>
 <script src="./js/app.js"></script>
+<script>
+    function daoTT() {
+        var mk = document.getElementById("pw");
+        mk.type = (mk.type === "password")? "text":"password";
+    }  
+    </script>
 </html>

@@ -208,6 +208,11 @@ body{
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 
 }
+.list-product:hover span,
+.list-product:hover img{
+    cursor: pointer;
+    opacity: 0.5;
+}
 .list-product img{
     height: 180px;
     width: 190px;
@@ -602,4 +607,10 @@ body{
 /* laptop fix */
 .detail-product .loadpicture.laptop img{
     height: 160px;
+}
+i.fas{
+    position: absolute;
+    right: 423px;
+    top: 10px;
+    cursor: pointer;
 }
