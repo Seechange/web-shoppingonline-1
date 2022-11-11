@@ -111,6 +111,11 @@ body{
 .menu li:hover .sub-navi{
     display: flex;
 }
+.menu > li:hover >i,
+.menu > li:hover >a{
+    color: white;
+    
+}
 .list-item{
     margin-top: 10px;
     background-color: white;

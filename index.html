@@ -38,7 +38,7 @@
                                 </div>
                                 <div class="col l-3 icon js-account ">
                                     <i class="ti-user"></i>
-                                    <span>Thành viên</span>
+                                    <span id="member-account">Thành viên</span>
                                 </div>
                                 <div class="col l-3 icon ">
                                     <i class="ti-bag"></i>
@@ -1749,13 +1749,13 @@
                 <i class="ti-user"></i>
                 Tài khoản
             </div>
-            <div onsubmit="login()" class="modal-body">
+            <div class="modal-body">
                 <lable class="mgtbt15 tickets"><i class="ti-user"></i> Tên đăng nhập</lable>
                 <input class="input username" id="un" type="text" placeholder=" Email or user name..." autocomplete="off" autofocus/>
                 <lable class="mgtbt15 tickets"><i class="ti-shield"></i> Mật khẩu</lable>
                 <div style="position:relative ;" class="form-txtpw">
                     <input class="input password" id="pw" type="password" placeholder=" Enter password..."  autocomplete="off" autofocus/> <i  class="fas fa-eye" onclick="daoTT()"></i>
-                    <button type="submit" class="Login" id="btnLogin">Đăng Nhập <i class="ti-check"></i></button>
+                    <button onclick="login()" type="submit" class="Login" id="btnLogin">Đăng Nhập <i class="ti-check"></i></button>
                 </div>
             </div>
             <div class="footer-container">
