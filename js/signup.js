@@ -14,24 +14,30 @@ function signup(){
         address:address,
     }
     var json = JSON.stringify(user)
-    localStorage.setItem(username,json)
-    alert("Đăng ký thành công")
+    if(!username || !email || !password || !phone || !dayofbirth || !address ){
+        alert("Không được để trống bất kì ô nào")
+    }
+    else{
+        alert("Đăng ký thành công")
+        localStorage.setItem(username,json)
+    }
 }
 function login(){
     var username = document.getElementById("un").value
     var password = document.getElementById("pw").value
-    var user = localStorage.getItem(username)
-    // var data = JSON.parse(user)
-    if(user==null){
-        alert("Vui lòng không để trống bất kì ô nào")
+    var user = JSON.parse(localStorage.getItem(username))
+    if(!username || !password){
+        alert("Không được để trống bất kì ô nào")
     }
-    else if(username ==user.username && password == user.password){
-        alert("Đăng nhập thành công")
-        window.location.href="index.html"
-    }
-    else{
-        alert("Đăng nhập thất bại")
-    }
-
-
+    if(user ==null){
+        alert("Sai tên đăng nhập mật khẩu")
+    }else {
+        if (user.password != password){
+            alert("Mật khẩu không chính xác")
+        }else {
+            alert("Đăng nhập thành công")
+            window.location.href="index.html"
+            // document.getElementById("member-name").innerHTML=username
+        }
+    }  
 }
