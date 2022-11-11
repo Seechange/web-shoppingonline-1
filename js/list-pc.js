@@ -49,7 +49,7 @@ let listpc =  [
     {name:"MSI Gaming GF65 Thin 10UE i5 10500H", price:"24.290.000", gift: "1.270.000", vote: "4.0", countvote:"5", img: "./assets/img/laptop/msigaminggf65.jpg"},
 ];
 function render(){
-    const htmls = listpc.map((pc, index) => {
+    const htmls = perUser.map((pc, index) => {
         return `
         <div class="detail-product noshadow" data-index="${index}">
         <p style="visibility: hidden; background-color: #f1f1f1;" class="tragop" >Trả góp 0%</p>
@@ -73,4 +73,33 @@ function render(){
     })
     box_pc.innerHTML = htmls.join("");
 }
-render();
+let curentPage = 1; //page bat dau trong load lai trang
+let perPage = 20;
+let totalPage = listpc.length/20;
+let perUser = [];
+async function getUser(){
+    try{
+        perUser = listpc.slice(
+            (curentPage -1)*perPage,
+            (curentPage -1) *perPage + perPage,
+        )
+        render();
+        render_page();
+    }catch(e){
+        console.log(e)}
+}
+function handlePage(num){
+    curentPage = num;
+    perUser = listpc.slice(
+        (curentPage -1)*perPage,
+        (curentPage -1) *perPage + perPage,
+    )
+    render();
+}
+function render_page(){
+    totalPage = listpc.length / perPage;
+    for(let i = 1; i<= totalPage;i++){
+        document.querySelector('.containner-numPage').innerHTML += '<li onclick ="handlePage('+i+')">'+i+'</li>'
+    }
+}
+getUser();
