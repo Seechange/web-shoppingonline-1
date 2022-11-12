@@ -71,7 +71,7 @@ let listsmartwatch =  [
 function render(){
     const htmls = perUser.map((pc, index) => {
         return `
-        <div class="detail-product noshadow">
+        <div class="detail-product noshadow" data-index="${index}">
         <p style="background-color: #EB5757;" class="tragop" >Trả góp 0%</p>
         <div class="loadpicture">
             <img src="${pc.img}" alt="">

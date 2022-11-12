@@ -1,5 +1,6 @@
 // slide fade header
 let slideIndex = 0;
+let cloud = 0;
 showSlides();
 
 function showSlides() {

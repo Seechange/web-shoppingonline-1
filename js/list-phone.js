@@ -101,7 +101,7 @@ let listphone =  [
 function render(){
     const htmls = perUser.map((pc, index) => {
         return `
-        <div class=" detail-product noshadow">
+        <div class=" detail-product noshadow" data-index ="${index}">
         <p class="tragop" style="visibility: hidden;">Trả góp 0%</p>
         <div class="loadpicture">
             <img src="${pc.img}" alt="">
@@ -114,7 +114,7 @@ function render(){
             </div>
         </div>
         <p class="result-lable"><img src="./assets/img/icon6-50x50.png" alt=""><span>VNPAY GIẢM ${pc.gift}</span></p>
-        <h3>${pc.name}</h3>
+        <h3 id="name">${pc.name}</h3>
         <p style="font-size:14px ; color: #666666; margin: 0px 0px 8px;" class="txt-note">Online giá rẻ</p>
         <p  class="price">${pc.price} VND <small>-21%</small></p>
         <p class="vote"><b>${pc.vote}</b> <i class="ti-star"></i>( ${pc.countvote} )</p>

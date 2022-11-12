@@ -23,6 +23,7 @@
 .block-item .title{
     height: 40px;
     margin-top: 20px;
+    padding: 50px;
 }
 .block-item .checkbox1{
     width: 100%;
