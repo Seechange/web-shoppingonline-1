@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="stylesheet" href="./assets/front-icon/themify-icons/themify-icons.css">
     <link href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" rel="stylesheet">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
 </head>
 <body>
     <div id="main">
@@ -108,13 +108,27 @@
                         <input id="password" class="input password" type="password" placeholder=" Enter password..."> <i style="right: 11px;
                         top: 62px;" class="fas fa-eye" onclick="daoTT()"></i>
                     </div>
-                    <div class="form-input">
+                    <div style="position:relative ;" class="form-input">
                         <lable class="mgtbt15 tickets"><i class="ti-email"></i> Email</lable>
-                        <input id="email" class="input email" type="email" placeholder=" Email or user name...">
+                        <input onkeyup="check(email,regExp)" id="email" class="input email" type="email" placeholder=" Email or user name...">
+                        <div class="icons">
+                            <span class="iconError fas fa-exclamation"></span>
+                            <span class="iconSuccess fas fa-check"></span>
+                         </div>
+                         <div class="error-text">
+                            Xin Hãy Nhập Đúng Định Dạng Email
+                         </div>
                     </div>
                     <div class="form-input">
                         <lable class="mgtbt15 tickets"><i class="ti-mobile"></i> Số điện thoại </lable>
-                        <input id="phonenumber" class="input phone" type="text" placeholder=" Enter your phone...">
+                        <input onmouseup="checkPhone(phoneNumber)" id="phonenumber" class="input phone" type="text" placeholder=" Enter your phone...">
+                        <div class="icons">
+                            <span class="iconError1 fas fa-exclamation"></span>
+                            <span class="iconSuccess1 fas fa-check"></span>
+                         </div>
+                         <div class="error-text">
+                            Xin Hãy Nhập Đúng Định Dạng Số Điện Thoại
+                         </div>
                     </div>
                     <div class="form-input">
                         <lable class="mgtbt15 tickets"><i class="ti-calendar"></i> Ngày sinh</lable>
