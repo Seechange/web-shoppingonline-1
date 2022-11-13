@@ -141,7 +141,7 @@
                     <button onclick="signup()" type="submit" style="border-radius:20px ;" class="Login">Tạo tài khoản <i class="ti-check"></i></button>
                 </div>
                 <div class="footer-container">
-                    <span>Bạn đã có tài khoản ?<a class="sign-in js-login-again" href="">Đăng nhập</a></span>
+                    <span>Bạn đã có tài khoản ?<a  id="btnAgain" class=" js-login-again" href="">Đăng nhập</a></span>
                 </div>
             </div>
         </div>
@@ -197,28 +197,6 @@
             </div>
         </div>
     </div>
-    <div class="modal login-modal js-modal">
-        <div class="grid wide modal-container js-container">
-            <div class="modal-close  js-close">
-                <i class="ti-close "></i>
-            </div>
-            <div class="modal-header">
-                <i class="ti-user"></i>
-                Tài khoản
-            </div>
-            <div class="modal-body">
-                <lable class="mgtbt15 tickets"><i class="ti-user"></i> Tên đăng nhập</lable>
-                <input class="input username" type="text" placeholder=" Email or user name...">
-                <lable class="mgtbt15 tickets"><i class="ti-shield"></i> Mật khẩu</lable>
-                <input class="input password" type="password" placeholder=" Enter password...">
-                <button class="Login">Đăng Nhập <i class="ti-check"></i></button>
-            </div>
-            <div class="footer-container">
-                <span>Khách hàng mới ?<a class="sign-in " href="signin.html">Tạo tài khoản</a></span>
-                <span>Quên mật khẩu ?<a class="reset-pass" href="">Khôi phục mật khẩu</a></span>
-            </div>
-        </div>
-    </div>
     <script src="./js/signup.js"></script>
 </body>
 <script>
@@ -232,6 +210,7 @@
         var mk = document.getElementById("password");
         mk.type = (mk.type === "password")? "text":"password";
     }  
+    
 </script>
 
 </html>
